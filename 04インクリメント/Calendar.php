@@ -131,7 +131,7 @@ for ( $day = 1; $day <= $day_count; $day++, $youbi++) {
 
 </div>
     <div class="container">
-        <h3><div class = mb-5><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $html_title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</div></a></h3>
+        <h3><div class = mb-5 style="text-align:center;"><a href="?ym=<?php echo $prev; ?>">&lt;</a> <?php echo $html_title; ?> <a href="?ym=<?php echo $next; ?>">&gt;</div></a></h3>
         <table class="table table-bordered">
             <tr>
                 <th>日</th>
@@ -153,10 +153,10 @@ for ( $day = 1; $day <= $day_count; $day++, $youbi++) {
         </table>
         
 
-        <div class="sakusei">
+        <div class="sakusei" style="text-align:center;">
         <button type = "submit" formaction="../apointment/Apointment_check.php" class="buto">全予定を 確認する</button>
         </div>
-        <div class="sakuseia">
+        <div class="sakuseia" style="text-align:center;">
         <button type = "submit" formaction="../apointment/AddApointment.php" class="buto">予定を 追加する</button>
         </div>
         
