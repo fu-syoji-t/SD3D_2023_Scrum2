@@ -118,15 +118,10 @@ for ( $day = 1; $day <= $day_count; $day++, $youbi++) {
 <div class="header">
     </div>
 </head>
-<body>
 <body class="team">
-
 
 <form action="?" method="post">  
 
-   
-<body class="team">
-</div>
 
 
 </div>
