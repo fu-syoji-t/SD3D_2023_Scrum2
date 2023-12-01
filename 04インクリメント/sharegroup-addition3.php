@@ -39,7 +39,14 @@ background-color:		#C0C0C0;
 </head>
 <body class="tema">
 <?php
-
+require '../DAO.php';
+$pdo = new PDO('mysql:host=localhost;dbname=daysshare;charset=utf8','root','root');
+//$pdo = new DAO();
+    $sql = "INSERT INTO `group`(word,group_name) VALUES (?,?)";
+    $ps = $pdo->prepare($sql);
+    $ps->bindValue(1,$_SESSION['group']['word'],PDO::PARAM_STR);
+    $ps->bindValue(2,$_SESSION['group']['g_name'], PDO::PARAM_STR);
+    $ps->execute();  
 
     echo 'グループの登録が完了しました！！<br>';
 
