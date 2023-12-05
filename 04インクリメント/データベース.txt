@@ -1,12 +1,10 @@
 
 データベース:　'daysshare'
 
- 
-テーブルの構造 'account'
 CREATE TABLE `account` (
   `account_id` int(11) NOT NULL,
   `mail` varchar(191) NOT NULL,
-  `password` varchar(191) NOT NULL,
+  `pass` varchar(191) NOT NULL,
   `name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
  
@@ -34,7 +32,6 @@ INSERT INTO `group` (`group_id`, `word`, `group_name`) VALUES
 
 ------------------------------------------------
 -- テーブルの構造 `schedule`
---
 
 CREATE TABLE `schedule` (
   `schedule_id` int(11) NOT NULL,
