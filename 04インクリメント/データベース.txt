@@ -1,0 +1,57 @@
+
+データベース:　'daysshare'
+
+CREATE TABLE `account` (
+  `account_id` int(11) NOT NULL,
+  `mail` varchar(191) NOT NULL,
+  `pass` varchar(191) NOT NULL,
+  `name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ 
+-----------------------------------------------
+データ追加
+INSERT INTO `account` (`account_id`, `mail`, `password`, `name`) VALUES
+(1, 'a@a', 'a', 'A君'),
+(2, 'b@b', 'a', 'B君'),
+(3, 'c@c', 'c', 'C君'),
+(4, 'd@d', 'd', 'D君'),
+
+------------------------------------------------
+テーブルの構造'group'
+CREATE TABLE `group` (
+  `group_id` int(11) NOT NULL,
+  `word` varchar(20) NOT NULL,
+  `group_name` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+------------------------------------------------
+データ追加
+INSERT INTO `group` (`group_id`, `word`, `group_name`) VALUES
+(, '1234', 'daysshare'),
+
+------------------------------------------------
+-- テーブルの構造 `schedule`
+
+CREATE TABLE `schedule` (
+  `schedule_id` int(11) NOT NULL,
+  `group_id` int(11) NOT NULL,
+  `account_id` int(11) NOT NULL,
+  `startday` date NOT NULL,
+  `starttime` time NOT NULL,
+  `endday` date NOT NULL,
+  `endtime` time NOT NULL,
+  `title` varchar(20) NOT NULL,
+  `memo` varchar(191) DEFAULT NULL,
+  `mastar` int(1) DEFAULT NULL 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+------------------------------------------------
+データ追加
+INSERT INTO `schedule` (`schedule_id`, `group_id`, `account_id`, `startday`, `starttime`, `endday`, `endtime`, `title`, `memo`) VALUES
+(1, 1234, 1, '2023-10-02', '09:30:00', '2023-10-2', '12:45:00', '学校', '授業');
+
+
+
+
+
