@@ -86,7 +86,8 @@ $dao = new DAO();
      ?>
      <h3>パスワード</h3>
      <?php
-     echo '<h3>'. $_POST['pass'] .'</h3>';
+     $password = $_POST['pass'];
+     echo str_repeat('*', strlen($password));
      ?>
      <h4>ニックネーム</h4>
      <?php
